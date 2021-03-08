@@ -1,2 +1,6 @@
 furo
 nbsphinx
+IPython
+jupyter
+notebook
+ipykernel
