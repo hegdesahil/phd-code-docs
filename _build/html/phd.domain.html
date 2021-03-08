@@ -1,0 +1,1066 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>phd.domain package &mdash; phd 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> -->
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="https://github.com/mpariente/asteroid" aria-label="PyTorch">
+       <!-- <img class="call-to-action-img" src="_static/images/asteroid_logo_dark.png"/> -->
+      </a>
+
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://pytorch.org/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/blog/">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/tutorials">Tutorials</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/docs/stable/index.html">Docs</a>
+          </li>
+
+          <li>
+            <div class="resources-dropdown">
+              <a id="resourcesDropdownButton" data-toggle="resources-dropdown">
+                Resources
+              </a>
+              <div class="resources-dropdown-menu">
+                <a class="nav-dropdown-item" href="https://pytorch.org/resources"">
+                  <span class=dropdown-title>Developer Resources</span>
+                  <p>Find resources and get questions answered</p>
+                </a>
+                <!--
+                <a class="nav-dropdown-item" href="https://pytorch.org/features">
+                  <span class=dropdown-title>About</span>
+                  <p>Learn about PyTorch’s features and capabilities</p>
+                </a>
+                -->
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/mpariente/asteroid">Github</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+
+  </div>
+</div>
+
+
+<body class="pytorch-body">
+
+   
+
+    
+
+    <div class="table-of-contents-link-wrapper">
+      <span>Table of Contents</span>
+      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+    </div>
+
+    <nav data-toggle="wy-nav-shift" class="pytorch-left-menu" id="pytorch-left-menu">
+      <div class="pytorch-side-scroll">
+        <div class="pytorch-menu pytorch-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="pytorch-left-menu-search">
+            
+
+            
+              
+              
+            
+
+            
+
+
+  
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+          </div>
+
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <div class="pytorch-container">
+      <div class="pytorch-page-level-bar" id="pytorch-page-level-bar">
+        <div class="pytorch-breadcrumbs-wrapper">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="pytorch-breadcrumbs">
+    
+      <li>
+        <a href="index.html">
+          
+            Docs
+          
+        </a> &gt;
+      </li>
+
+        
+      <li>phd.domain package</li>
+    
+    
+      <li class="pytorch-breadcrumbs-aside">
+        
+            
+            <a href="_sources/phd.domain.rst.txt" rel="nofollow"><img src="_static/images/view-page-source-icon.svg"></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+</div>
+        </div>
+
+        <div class="pytorch-shortcuts-wrapper" id="pytorch-shortcuts-wrapper">
+          Shortcuts
+        </div>
+      </div>
+
+      <section data-toggle="wy-nav-shift" id="pytorch-content-wrap" class="pytorch-content-wrap">
+        <div class="pytorch-content-left">
+
+        
+          
+          <div class="rst-content">
+          
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+             <article itemprop="articleBody" id="pytorch-article" class="pytorch-article">
+              
+  <div class="section" id="phd-domain-package">
+<h1>phd.domain package<a class="headerlink" href="#phd-domain-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-phd.domain.boundary">
+<span id="phd-domain-boundary-module"></span><h2>phd.domain.boundary module<a class="headerlink" href="#module-phd.domain.boundary" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="phd.domain.boundary.BoundaryConditionBase">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.boundary.</code><code class="sig-name descname">BoundaryConditionBase</code><a class="headerlink" href="#phd.domain.boundary.BoundaryConditionBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="phd.domain.boundary.BoundaryConditionBase.update_fields">
+<code class="sig-name descname">update_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.boundary.BoundaryConditionBase.update_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="phd.domain.boundary.Periodic">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.boundary.</code><code class="sig-name descname">Periodic</code><a class="headerlink" href="#phd.domain.boundary.Periodic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#id0" title="phd.domain.boundary.BoundaryConditionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">phd.domain.boundary.BoundaryConditionBase</span></code></a></p>
+<dl class="py method">
+<dt id="phd.domain.boundary.Periodic.update_fields">
+<code class="sig-name descname">update_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.boundary.Periodic.update_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer gradient from image particle to ghost particle with reflective
+boundary condition.</p>
+<p>For periodic boundary condition the there is no need to update gradients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Gradient data</p></li>
+<li><p><strong>gradients</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of gradients for each primitive field.</p></li>
+<li><p><strong>p</strong> (<em>FlagParticle*</em>) – Pointer to flagged particle.</p></li>
+<li><p><strong>domain_manager</strong> (<a class="reference internal" href="#id8" title="phd.domain.domain_manager.DomainManager"><em>DomainManager</em></a>) – Class that handels all things related with the domain.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="phd.domain.boundary.Reflective">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.boundary.</code><code class="sig-name descname">Reflective</code><a class="headerlink" href="#phd.domain.boundary.Reflective" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#id0" title="phd.domain.boundary.BoundaryConditionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">phd.domain.boundary.BoundaryConditionBase</span></code></a></p>
+<dl class="py method">
+<dt id="phd.domain.boundary.Reflective.update_fields">
+<code class="sig-name descname">update_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.boundary.Reflective.update_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer gradient from image particle to ghost particle with reflective
+boundary condition.</p>
+<p>For reflective boundary condition the velocity gradient normal to the
+boundary interface has to be flipped. This function finds all ghost
+particles outside the domain and flips the corresponding component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Gradient data</p></li>
+<li><p><strong>gradients</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of gradients for each primitive field.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h2>phd.domain.boundary module<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-0"></span><dl class="py class">
+<dt id="id0">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.boundary.</code><code class="sig-name descname">BoundaryConditionBase</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="id2">
+<code class="sig-name descname">update_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="id3">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.boundary.</code><code class="sig-name descname">Periodic</code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#id0" title="phd.domain.boundary.BoundaryConditionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">phd.domain.boundary.BoundaryConditionBase</span></code></a></p>
+<dl class="py method">
+<dt id="id4">
+<code class="sig-name descname">update_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer gradient from image particle to ghost particle with reflective
+boundary condition.</p>
+<p>For periodic boundary condition the there is no need to update gradients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Gradient data</p></li>
+<li><p><strong>gradients</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of gradients for each primitive field.</p></li>
+<li><p><strong>p</strong> (<em>FlagParticle*</em>) – Pointer to flagged particle.</p></li>
+<li><p><strong>domain_manager</strong> (<a class="reference internal" href="#id8" title="phd.domain.domain_manager.DomainManager"><em>DomainManager</em></a>) – Class that handels all things related with the domain.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="id5">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.boundary.</code><code class="sig-name descname">Reflective</code><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#id0" title="phd.domain.boundary.BoundaryConditionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">phd.domain.boundary.BoundaryConditionBase</span></code></a></p>
+<dl class="py method">
+<dt id="id6">
+<code class="sig-name descname">update_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer gradient from image particle to ghost particle with reflective
+boundary condition.</p>
+<p>For reflective boundary condition the velocity gradient normal to the
+boundary interface has to be flipped. This function finds all ghost
+particles outside the domain and flips the corresponding component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Gradient data</p></li>
+<li><p><strong>gradients</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of gradients for each primitive field.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-phd.domain.domain_manager">
+<span id="phd-domain-domain-manager-module"></span><h2>phd.domain.domain_manager module<a class="headerlink" href="#module-phd.domain.domain_manager" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="phd.domain.domain_manager.DomainManager">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.domain_manager.</code><code class="sig-name descname">DomainManager</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.boundary_condition">
+<code class="sig-name descname">boundary_condition</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.boundary_condition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.check_for_partition">
+<code class="sig-name descname">check_for_partition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.check_for_partition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if partition needs to called</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.create_ghost_particles">
+<code class="sig-name descname">create_ghost_particles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.create_ghost_particles" title="Permalink to this definition">¶</a></dt>
+<dd><p>After mesh generation, this method goes through partilce list
+and generates ghost particles and communicates them. This method
+is called by mesh repeatedly until the mesh is complete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.ghost_complete">
+<code class="sig-name descname">ghost_complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.ghost_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if their are no more particles flagged for ghost
+creation.</p>
+<p>Particles that have been flagged for ghost creation are stored
+in flagged_particles. When flagged particles have a complete
+voronoi cell they are removed from flagged_particles.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.initial_radius">
+<code class="sig-name descname">initial_radius</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.initial_radius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.initialize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.load_balance">
+<code class="sig-name descname">load_balance</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.load_balance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.migrate_particles">
+<code class="sig-name descname">migrate_particles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.migrate_particles" title="Permalink to this definition">¶</a></dt>
+<dd><p>For particles that have left the domain or processor patch
+move particles to their appropriate spot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.move_generators">
+<code class="sig-name descname">move_generators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.move_generators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move particles after flux update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) – Time step of the simulation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.old_radius">
+<code class="sig-name descname">old_radius</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.old_radius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.partition">
+<code class="sig-name descname">partition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.partition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distribute particles across processors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.register_fields">
+<code class="sig-name descname">register_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.register_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register mesh fields into the particle container (i.e.
+volume, center of mass)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.search_radius_factor">
+<code class="sig-name descname">search_radius_factor</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.search_radius_factor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.set_boundary_condition">
+<code class="sig-name descname">set_boundary_condition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.set_boundary_condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>add boundary condition to list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.set_load_balance">
+<code class="sig-name descname">set_load_balance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.set_load_balance" title="Permalink to this definition">¶</a></dt>
+<dd><p>add boundary condition to list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.setup_for_ghost_creation">
+<code class="sig-name descname">setup_for_ghost_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.setup_for_ghost_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go through each particle and flag for ghost creation. For particles
+with infinite radius use radius from previous time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.setup_initial_radius">
+<code class="sig-name descname">setup_initial_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.setup_initial_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>At the start of the simulation assign every particle an
+initial radius used for constructing the mesh. This values
+gets updated after each mesh build.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.store_radius">
+<code class="sig-name descname">store_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.store_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>At the start of the simulation assign every particle an
+initial radius used for constructing the mesh. This values
+gets updated after each mesh build.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.update_ghost_fields">
+<code class="sig-name descname">update_ghost_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.update_ghost_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer ghost fields from their image particle.</p>
+<p>After ghost particles are created their are certain fields that
+cannot be calculated (i.e. volume, center-of-mass …) and need
+to be upated from their resepective image particle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of particles.</p></li>
+<li><p><strong>fields</strong> (<em>list</em>) – List of field strings to update</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.update_ghost_gradients">
+<code class="sig-name descname">update_ghost_gradients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.update_ghost_gradients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update ghost gradients from their mirror particle.</p>
+<p>After reconstruction only real particles have gradients calculated.
+This call will transfer those calcluated gradients to the respective
+ghost particles with appropriate updates from the boundary condition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of particles.</p></li>
+<li><p><strong>gradients</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of gradients for each primitive field.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="phd.domain.domain_manager.DomainManager.update_search_radius">
+<code class="sig-name descname">update_search_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.update_search_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go through each flag particle and update its radius. If
+the particle is still infinite double the search radius. If
+the new radius is smaller then the old search radius then that
+particle is done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.xmax">
+<code class="sig-name descname">xmax</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.xmax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="phd.domain.domain_manager.DomainManager.xmin">
+<code class="sig-name descname">xmin</code><a class="headerlink" href="#phd.domain.domain_manager.DomainManager.xmin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id7">
+<h2>phd.domain.domain_manager module<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-1"></span><dl class="py class">
+<dt id="id8">
+<em class="property">class </em><code class="sig-prename descclassname">phd.domain.domain_manager.</code><code class="sig-name descname">DomainManager</code><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="id9">
+<code class="sig-name descname">boundary_condition</code><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id10">
+<code class="sig-name descname">check_for_partition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if partition needs to called</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id11">
+<code class="sig-name descname">create_ghost_particles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
+<dd><p>After mesh generation, this method goes through partilce list
+and generates ghost particles and communicates them. This method
+is called by mesh repeatedly until the mesh is complete.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id12">
+<code class="sig-name descname">ghost_complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if their are no more particles flagged for ghost
+creation.</p>
+<p>Particles that have been flagged for ghost creation are stored
+in flagged_particles. When flagged particles have a complete
+voronoi cell they are removed from flagged_particles.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id13">
+<code class="sig-name descname">initial_radius</code><a class="headerlink" href="#id13" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id14">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id14" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id15">
+<code class="sig-name descname">load_balance</code><a class="headerlink" href="#id15" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id16">
+<code class="sig-name descname">migrate_particles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id16" title="Permalink to this definition">¶</a></dt>
+<dd><p>For particles that have left the domain or processor patch
+move particles to their appropriate spot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id17">
+<code class="sig-name descname">move_generators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id17" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move particles after flux update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p></li>
+<li><p><strong>dt</strong> (<em>float</em>) – Time step of the simulation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id18">
+<code class="sig-name descname">old_radius</code><a class="headerlink" href="#id18" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id19">
+<code class="sig-name descname">partition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id19" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distribute particles across processors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id20">
+<code class="sig-name descname">register_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id20" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register mesh fields into the particle container (i.e.
+volume, center of mass)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id21">
+<code class="sig-name descname">search_radius_factor</code><a class="headerlink" href="#id21" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="id22">
+<code class="sig-name descname">set_boundary_condition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id22" title="Permalink to this definition">¶</a></dt>
+<dd><p>add boundary condition to list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id23">
+<code class="sig-name descname">set_load_balance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id23" title="Permalink to this definition">¶</a></dt>
+<dd><p>add boundary condition to list</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id24">
+<code class="sig-name descname">setup_for_ghost_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id24" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go through each particle and flag for ghost creation. For particles
+with infinite radius use radius from previous time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id25">
+<code class="sig-name descname">setup_initial_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id25" title="Permalink to this definition">¶</a></dt>
+<dd><p>At the start of the simulation assign every particle an
+initial radius used for constructing the mesh. This values
+gets updated after each mesh build.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id26">
+<code class="sig-name descname">store_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id26" title="Permalink to this definition">¶</a></dt>
+<dd><p>At the start of the simulation assign every particle an
+initial radius used for constructing the mesh. This values
+gets updated after each mesh build.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id27">
+<code class="sig-name descname">update_ghost_fields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id27" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer ghost fields from their image particle.</p>
+<p>After ghost particles are created their are certain fields that
+cannot be calculated (i.e. volume, center-of-mass …) and need
+to be upated from their resepective image particle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of particles.</p></li>
+<li><p><strong>fields</strong> (<em>list</em>) – List of field strings to update</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id28">
+<code class="sig-name descname">update_ghost_gradients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id28" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update ghost gradients from their mirror particle.</p>
+<p>After reconstruction only real particles have gradients calculated.
+This call will transfer those calcluated gradients to the respective
+ghost particles with appropriate updates from the boundary condition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of particles.</p></li>
+<li><p><strong>gradients</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Container of gradients for each primitive field.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id29">
+<code class="sig-name descname">update_search_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id29" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go through each flag particle and update its radius. If
+the particle is still infinite double the search radius. If
+the new radius is smaller then the old search radius then that
+particle is done.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>particles</strong> (<a class="reference internal" href="phd.containers.html#id0" title="phd.containers.containers.CarrayContainer"><em>CarrayContainer</em></a>) – Class that holds all information pertaining to the particles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id30">
+<code class="sig-name descname">xmax</code><a class="headerlink" href="#id30" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id31">
+<code class="sig-name descname">xmin</code><a class="headerlink" href="#id31" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-phd.domain">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-phd.domain" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+             </article>
+             
+            </div>
+            <footer>
+  
+
+  
+
+    <hr>
+
+  
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Ricardo Fernandez, Greg Bryan.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+      </div>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="pytorch-content-right" id="pytorch-content-right">
+          <div class="pytorch-right-menu" id="pytorch-right-menu">
+            <div class="pytorch-side-scroll" id="pytorch-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">phd.domain package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-phd.domain.boundary">phd.domain.boundary module</a></li>
+<li><a class="reference internal" href="#id1">phd.domain.boundary module</a></li>
+<li><a class="reference internal" href="#module-phd.domain.domain_manager">phd.domain.domain_manager module</a></li>
+<li><a class="reference internal" href="#id7">phd.domain.domain_manager module</a></li>
+<li><a class="reference internal" href="#module-phd.domain">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  
+
+
+  
+
+     
+       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+         <script src="_static/jquery.js"></script>
+         <script src="_static/underscore.js"></script>
+         <script src="_static/doctools.js"></script>
+         <script src="_static/language_data.js"></script>
+     
+
+  
+
+  <script type="text/javascript" src="_static/js/vendor/popper.min.js"></script>
+  <script type="text/javascript" src="_static/js/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid" id="docs-tutorials-resources">
+    <div class="container">
+      <div class="row">
+        <!--
+        <div class="col-md-4 text-center">
+          <h2>Docs</h2>
+          <p>Access comprehensive developer documentation for PyTorch</p>
+          <a class="with-right-arrow" href="https://pytorch.org/docs/stable/index.html">View Docs</a>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <h2>Tutorials</h2>
+          <p>Get in-depth tutorials for beginners and advanced developers</p>
+          <a class="with-right-arrow" href="https://pytorch.org/tutorials">View Tutorials</a>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <h2>Resources</h2>
+          <p>Find development resources and get your questions answered</p>
+          <a class="with-right-arrow" href="https://pytorch.org/resources">View Resources</a>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-wrapper">
+        <a href="https://github.com/mpariente/asteroid" class="footer-logo"></a>
+      </div>
+
+      <div class="footer-links-wrapper">
+
+        <div class="footer-logo-col">
+          <img class="footer-logo-img" src="_static/images/dark_asteroid_logo.svg"/>
+        </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="https://github.com/mpariente/asteroid">Asteroid</a></li>
+            <li><a href="https://pytorch.org/get-started">Get Started</a></li>
+            <li><a href="https://pytorch.org/features">Features</a></li>
+            <li><a href="">Ecosystem</a></li>
+            <li><a href="https://pytorch.org/blog/">Blog</a></li>
+            <li><a href="https://pytorch.org/resources">Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <ul>
+            <li class="list-title"><a href="https://pytorch.org/support">Support</a></li>
+            <li><a href="https://pytorch.org/tutorials">Tutorials</a></li>
+            <li><a href="https://pytorch.org/docs/stable/index.html">Docs</a></li>
+            <li><a href="https://discuss.pytorch.org" target="_blank">Discuss</a></li>
+            <li><a href="https://github.com/mpariente/asteroid/issues" target="_blank">Github Issues</a></li>
+            <li><a href="" target="_blank">Slack</a></li>
+            <li><a href="https://github.com/mpariente/asteroid/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col follow-us-col">
+          <ul>
+            <li class="list-title">Follow Us</li>
+            <li>
+              <div id="mc_embed_signup">
+                <form
+                  action="https://twitter.us14.list-manage.com/subscribe/post?u=75419c71fe0a935e53dfa4a3f&id=91d0dccd39"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="email-subscribe-form validate"
+                  target="_blank"
+                  novalidate>
+                  <div id="mc_embed_signup_scroll" class="email-subscribe-form-fields-wrapper">
+                    <div class="mc-field-group">
+                      <label for="mce-EMAIL" style="display:none;">Email Address</label>
+                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                    </div>
+
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75419c71fe0a935e53dfa4a3f_91d0dccd39" tabindex="-1" value=""></div>
+
+                    <div class="clear">
+                      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button email-subscribe-button">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </li>
+          </ul>
+
+          <div class="footer-social-icons">
+            <a href="" target="_blank" class="facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="twitter"></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer> -->
+
+
+  <!-- End Footer -->
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="https://github.com/mpariente/asteroid" aria-label="PyTorch Lightning"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="https://pytorch.org/get-started">Get Started</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/features">Features</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/blog/">Blog</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/tutorials">Tutorials</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/docs/stable/index.html">Docs</a>
+          </li>
+
+          <li>
+            <a href="https://pytorch.org/resources">Resources</a>
+          </li>
+
+          <li>
+            <a href="https://github.com/mpariente/asteroid">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="_static/js/vendor/anchor.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      pytorchAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.pytorch-article a span.pre").each(function(e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+</html>
