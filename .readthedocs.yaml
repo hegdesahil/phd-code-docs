@@ -12,10 +12,8 @@ sphinx:
 python:
   version: 3.8
   install:
-    - method: pip
-    - requirements: requirements.txt
+  - requirements: requirements.txt
 
-formats: []
 
 # Optionally build your docs in additional formats such as PDF
 #formats:
