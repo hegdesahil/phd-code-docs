@@ -27,8 +27,9 @@ Tutorials and Tests
    example_nbooks/linear_wave_test.ipynb
    example_nbooks/sod_shock_test.ipynb
 
-Docs
-====
+Documentation
+=============
+
 .. toctree::
    
    docs.rst   
