@@ -31,7 +31,7 @@ Docs
 ====
 .. toctree::
    
-   phd_code_docs/phd.rst
+   docs.rst   
 
 Index
 ==================

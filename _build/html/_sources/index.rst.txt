@@ -11,8 +11,7 @@ phd: the python-based hydrodynamics package
    :caption: Contents:
 
    install
-   modules
-   
+
    :caption: Tutorials:
 
 	example_nbooks/linear_wave_test.ipynb
@@ -32,8 +31,7 @@ Docs
 ====
 .. toctree::
    
-   phd_code_docs/phd.reconstruction.rst
-   phd_code_docs/phd.rst
+   docs.rst   
 
 Index
 ==================
